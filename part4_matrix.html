@@ -25,6 +25,11 @@
         .h-stay { height: 75px; }
         .h-usp { height: 130px; line-height: 1.5; padding: 15px; }
         .h-exclusive { height: 85px; font-style: italic; color: #64748b; font-size: 12px; }
+
+        /* Zoom Modal Styles */
+        #zoom-modal { transition: opacity 0.3s ease; }
+        .zoom-img-container { transform: scale(0.9); transition: transform 0.3s ease; }
+        #zoom-modal.active .zoom-img-container { transform: scale(1); }
     </style>
 </head>
 <body class="pb-10">
@@ -97,33 +102,45 @@
 
         </div>
 
-        <!-- Poster Reference Section - 1 Sample slot per company -->
+        <!-- Poster Reference Section -->
         <div class="mt-12 px-2">
             <h3 class="text-slate-800 font-bold mb-6 flex items-center text-sm border-b pb-2">
-                <i class="fas fa-camera-retro mr-2"></i> 宣傳樣本參考 (Visual Samples - 1 per Brand)
+                <i class="fas fa-camera-retro mr-2"></i> 宣傳樣本參考 (點擊放大預覽)
             </h3>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- LFC Poster Slot -->
-                <div class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                <!-- LFC Poster -->
+                <div onclick="openZoom('https://placehold.co/800x1200/C8102E/white?text=LFC+Full+Poster')" class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in group">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center transition-all">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <div class="absolute top-2 left-2 bg-red-600 text-white text-[8px] font-bold px-2 py-0.5 rounded z-10">LFC HK</div>
                     <img src="https://placehold.co/600x800/C8102E/white?text=LFC+Poster" class="w-full h-full object-cover" alt="LFC Poster">
                 </div>
 
-                <!-- Juve Poster Slot -->
-                <div class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                <!-- Juve Poster -->
+                <div onclick="openZoom('https://placehold.co/800x1200/000000/white?text=Juve+Full+Poster')" class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in group">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center transition-all">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <div class="absolute top-2 left-2 bg-white text-black text-[8px] font-bold px-2 py-0.5 rounded shadow z-10">JUVE</div>
                     <img src="https://placehold.co/600x800/000000/white?text=Juve+Poster" class="w-full h-full object-cover" alt="Juventus Poster">
                 </div>
 
-                <!-- PSG Poster Slot -->
-                <div class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                <!-- PSG Poster -->
+                <div onclick="openZoom('https://placehold.co/800x1200/004170/white?text=PSG+Full+Poster')" class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in group">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center transition-all">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <div class="absolute top-2 left-2 bg-blue-900 text-white text-[8px] font-bold px-2 py-0.5 rounded z-10">PSG</div>
                     <img src="https://placehold.co/600x800/004170/white?text=PSG+Poster" class="w-full h-full object-cover" alt="PSG Poster">
                 </div>
 
-                <!-- CSA Poster Slot -->
-                <div class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                <!-- CSA Poster -->
+                <div onclick="openZoom('https://placehold.co/800x1200/005599/white?text=CSA+Full+Poster')" class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in group">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center transition-all">
+                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
                     <div class="absolute top-2 left-2 bg-blue-500 text-white text-[8px] font-bold px-2 py-0.5 rounded z-10">CSA</div>
                     <img src="https://placehold.co/600x800/005599/white?text=CSA+Poster" class="w-full h-full object-cover" alt="CSA Poster">
                 </div>
@@ -141,9 +158,55 @@
         </div>
     </main>
 
+    <!-- Tap to Zoom Modal Overlay -->
+    <div id="zoom-modal" class="fixed inset-0 bg-black/90 z-[100] hidden opacity-0 flex flex-col items-center justify-center p-4 transition-all duration-300">
+        <button onclick="closeZoom()" class="absolute top-6 right-6 text-white text-4xl p-2 z-[110]">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="zoom-img-container max-w-full max-h-[85vh] overflow-auto rounded-xl">
+            <img id="modal-img" src="" class="max-w-full h-auto mx-auto shadow-2xl" alt="Full Preview">
+        </div>
+        <p class="text-white/60 text-xs mt-6 uppercase tracking-widest">點擊背景關閉預覽</p>
+    </div>
+
     <footer class="mt-12 text-center text-[10px] text-slate-400 pb-10">
         <p>Market Research Project 2026 • Team 10</p>
     </footer>
+
+    <script>
+        const modal = document.getElementById('zoom-modal');
+        const modalImg = document.getElementById('modal-img');
+
+        function openZoom(imgSrc) {
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+            // Timeout to allow browser to trigger CSS transition
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.classList.add('active');
+            }, 10);
+            // Disable background scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeZoom() {
+            modal.classList.add('opacity-0');
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImg.src = '';
+            }, 300);
+            // Restore background scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close when clicking background
+        modal.onclick = function(e) {
+            if (e.target === modal || e.target.classList.contains('zoom-img-container')) {
+                closeZoom();
+            }
+        };
+    </script>
 
 </body>
 </html>
