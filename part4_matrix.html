@@ -19,12 +19,13 @@
         }
 
         /* Fixed Row Heights for grid alignment */
-        .row-h { display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
+        .row-h { display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; border-bottom: 1px solid #f1f5f9; font-size: 12px; }
         .h-price { height: 60px; font-weight: bold; font-size: 14px; }
         .h-date { height: 60px; }
         .h-stay { height: 75px; }
-        .h-usp { height: 130px; line-height: 1.5; padding: 15px; }
-        .h-exclusive { height: 85px; font-style: italic; color: #64748b; font-size: 12px; }
+        .h-usp { height: 110px; line-height: 1.4; padding: 10px; }
+        .h-inclusion { height: 200px; line-height: 1.4; padding: 12px; font-size: 11px; align-items: flex-start; text-align: left; }
+        .h-exclusive { height: 85px; font-style: italic; color: #64748b; font-size: 11px; }
 
         /* Zoom Modal Styles */
         #zoom-modal { transition: opacity 0.3s ease; }
@@ -46,60 +47,125 @@
 
             <!-- Card 1: LFC -->
             <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
-                <div class="h-28 flex items-center justify-center border-b border-slate-100 p-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png" class="h-16" alt="LFC Logo">
+                <div class="h-24 flex items-center justify-center border-b border-slate-100 p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png" class="h-14" alt="LFC Logo">
                 </div>
                 <div class="flex flex-col">
                     <div class="row-h h-price text-slate-800">HK$50,000 - 60,000</div>
                     <div class="row-h h-date">暑假 / 聖誕<br><span class="text-xs text-slate-500">(8-11 日)</span></div>
                     <div class="row-h h-stay">英國寄宿學校<br><span class="text-[10px] text-slate-400">Repton / Radley College</span></div>
                     <div class="row-h h-usp">「利物浦之道」教學<br>注重全人教育、性格培養<br>YNWA 球會文化</div>
+                    <div class="row-h h-inclusion flex-col">
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>LFC Academy 官方課程</li>
+                            <li>足球英語、分析工作坊</li>
+                            <li>LFC 訓練球衣一套</li>
+                            <li>全包餐膳 (Full Board)</li>
+                            <li>利物浦城市觀光、樂園遊</li>
+                        </ul>
+                    </div>
                     <div class="row-h h-exclusive">晏菲路球場深度遊<br>官方認證培訓證書</div>
                 </div>
             </div>
 
             <!-- Card 2: Juventus -->
             <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
-                <div class="h-28 flex items-center justify-center border-b border-slate-100 p-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Juventus_FC_2017_logo.svg/1200px-Juventus_FC_2017_logo.svg.png" class="h-16" alt="Juventus Logo">
+                <div class="h-24 flex items-center justify-center border-b border-slate-100 p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Juventus_FC_2017_logo.svg/1200px-Juventus_FC_2017_logo.svg.png" class="h-14" alt="Juventus Logo">
                 </div>
                 <div class="flex flex-col">
                     <div class="row-h h-price text-slate-800">HK$17,450 (Land Only)</div>
                     <div class="row-h h-date">復活節<br><span class="text-xs text-slate-500">(7 日)</span></div>
                     <div class="row-h h-stay">3星級商務酒店<br><span class="text-[10px] text-slate-400">Turin / Milan</span></div>
                     <div class="row-h h-usp">「Calcio」意式足球文化<br>專注場上決策與<br>競賽智慧培訓</div>
+                    <div class="row-h h-inclusion flex-col">
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>Juve 學院教練每日訓練</li>
+                            <li>Serie A 聯賽門票 (祖記主場)</li>
+                            <li>Juve 官方訓練裝備</li>
+                            <li>與全球學院進行友誼賽</li>
+                            <li>包部分膳食 (意大利地道晚餐)</li>
+                        </ul>
+                    </div>
                     <div class="row-h h-exclusive">JTC Vinovo 基地<br>Allianz & San Siro 雙球場</div>
                 </div>
             </div>
 
             <!-- Card 3: PSG -->
             <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
-                <div class="h-28 flex items-center justify-center border-b border-slate-100 p-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/1200px-Paris_Saint-Germain_F.C..svg.png" class="h-16" alt="PSG Logo">
+                <div class="h-24 flex items-center justify-center border-b border-slate-100 p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/1200px-Paris_Saint-Germain_F.C..svg.png" class="h-14" alt="PSG Logo">
                 </div>
                 <div class="flex flex-col">
                     <div class="row-h h-price text-slate-800">HK$35,900 (包機票)</div>
                     <div class="row-h h-date">5月 (學期中)<br><span class="text-xs text-slate-500">(7 日)</span></div>
                     <div class="row-h h-stay">4星級精品酒店<br><span class="text-[10px] text-slate-400">Paris, France</span></div>
                     <div class="row-h h-usp">PSG 學院世界盃<br>22國代表國際巡遊<br>全包式奢華服務</div>
+                    <div class="row-h h-inclusion flex-col">
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>來回巴黎機票 (包機/直航)</li>
+                            <li>全套 Nike 訓練裝備</li>
+                            <li>3日學院世界盃賽事</li>
+                            <li>PSG 本季最後一場主場波飛</li>
+                            <li>全包餐膳、旅遊保險</li>
+                        </ul>
+                    </div>
                     <div class="row-h h-exclusive">王子公園球場決賽<br>住宿酒店 SPA 配套</div>
                 </div>
             </div>
 
             <!-- Card 4: CSA / Real Madrid -->
             <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
-                <div class="h-28 flex items-center justify-center border-b border-slate-100 p-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" class="h-16" alt="Real Madrid Logo">
+                <div class="h-24 flex items-center justify-center border-b border-slate-100 p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" class="h-14" alt="Real Madrid Logo">
                 </div>
                 <div class="flex flex-col">
                     <div class="row-h h-price text-slate-800">約 HK$28,500 (€3,345)</div>
                     <div class="row-h h-date">暑假<br><span class="text-xs text-slate-500">(11 日)</span></div>
                     <div class="row-h h-stay">3-4星級酒店<br><span class="text-[10px] text-slate-400">Madrid / Barcelona</span></div>
                     <div class="row-h h-usp">參與 MADCUP 國際賽<br>挑戰西班牙職業球隊<br>高度競爭實戰</div>
+                    <div class="row-h h-inclusion flex-col">
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>Donosti Cup 錦標賽席位</li>
+                            <li>皇馬基地 2 節官方訓練</li>
+                            <li>2 場對當地西甲梯隊友賽</li>
+                            <li>巴塞隆拿球場及博物館參觀</li>
+                            <li>半包膳食 (早+午/晚)</li>
+                        </ul>
+                    </div>
                     <div class="row-h h-exclusive">皇馬官方訓練基地<br>前港腳基奧親自領軍</div>
                 </div>
             </div>
 
+        </div>
+
+        <!-- Download Section -->
+        <div class="mt-12 px-2">
+            <h3 class="text-slate-800 font-bold mb-6 flex items-center text-sm border-b pb-2">
+                <i class="fas fa-file-pdf mr-2 text-red-500"></i> 詳細資料下載 (Package Details)
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <a href="#" class="bg-white border border-slate-200 p-3 rounded-xl flex flex-col items-center hover:bg-slate-50 transition shadow-sm">
+                    <i class="fas fa-file-download text-slate-400 mb-2"></i>
+                    <span class="text-[10px] font-bold text-slate-700">LFC Info Pack</span>
+                    <span class="text-[8px] text-slate-400">PDF - 2.4MB</span>
+                </a>
+                <a href="#" class="bg-white border border-slate-200 p-3 rounded-xl flex flex-col items-center hover:bg-slate-50 transition shadow-sm">
+                    <i class="fas fa-file-download text-slate-400 mb-2"></i>
+                    <span class="text-[10px] font-bold text-slate-700">Juve Info Pack</span>
+                    <span class="text-[8px] text-slate-400">PDF - 1.8MB</span>
+                </a>
+                <a href="#" class="bg-white border border-slate-200 p-3 rounded-xl flex flex-col items-center hover:bg-slate-50 transition shadow-sm">
+                    <i class="fas fa-file-download text-slate-400 mb-2"></i>
+                    <span class="text-[10px] font-bold text-slate-700">PSG Info Pack</span>
+                    <span class="text-[8px] text-slate-400">PDF - 3.1MB</span>
+                </a>
+                <a href="#" class="bg-white border border-slate-200 p-3 rounded-xl flex flex-col items-center hover:bg-slate-50 transition shadow-sm">
+                    <i class="fas fa-file-download text-slate-400 mb-2"></i>
+                    <span class="text-[10px] font-bold text-slate-700">CSA Info Pack</span>
+                    <span class="text-[8px] text-slate-400">PDF - 2.9MB</span>
+                </a>
+            </div>
         </div>
 
         <!-- Poster Reference Section -->
