@@ -3,136 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>海外足球訓練營研究 - 方案對比</title>
+    <title>海外足球訓練營研究 - Part 4</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;700&display=swap');
-        body { font-family: 'Noto Sans HK', sans-serif; }
+        body { font-family: 'Noto Sans HK', sans-serif; background-color: #f8fafc; }
         
-        /* 手機橫向滾動 Table 定制 */
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* 卡片固定高度，令排版整齊 */
-        .info-row { border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px 8px; font-size: 13px; }
-        .row-label { height: 50px; }
-        .row-price { height: 70px; font-weight: bold; font-size: 15px; }
-        .row-date { height: 60px; }
-        .row-stay { height: 70px; }
-        .row-usp { height: 110px; line-height: 1.4; }
-        .row-exclusive { height: 80px; font-style: italic; color: #64748b; }
-        .row-target { height: 80px; color: #94a3b8; font-size: 12px; }
+        /* Mobile Horizontal Scroll Setup */
+        @media (max-width: 767px) {
+            .mobile-scroll { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 20px; }
+            .mobile-scroll > div { flex-shrink: 0; scroll-snap-align: center; width: 88vw; margin-right: 12px; }
+            .hide-scrollbar::-webkit-scrollbar { display: none; }
+            .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        }
+
+        /* Fixed Row Heights for grid alignment */
+        .row-h { display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
+        .h-price { height: 60px; font-weight: bold; font-size: 14px; }
+        .h-date { height: 60px; }
+        .h-stay { height: 75px; }
+        .h-usp { height: 130px; line-height: 1.5; padding: 15px; }
+        .h-exclusive { height: 85px; font-style: italic; color: #64748b; font-size: 12px; }
     </style>
 </head>
-<body class="bg-slate-100 min-h-screen pb-10">
+<body class="pb-10">
 
-    <!-- Simple Header -->
-    <header class="bg-slate-800 text-white py-6 px-6 text-center shadow-md">
-        <h1 class="text-lg font-bold tracking-widest opacity-90 uppercase">海外足球訓練營 - 方案詳細對比</h1>
-        <p class="text-[10px] opacity-60 mt-1 uppercase">Research Reference Only • Swipe Left/Right to Compare</p>
+    <header class="bg-slate-800 text-white py-6 text-center shadow-lg">
+        <h1 class="text-lg font-bold tracking-widest uppercase">第四部分：方案對比分析</h1>
+        <p class="text-[10px] opacity-60 uppercase mt-1">Market Comparison Matrix</p>
     </header>
 
-    <main class="mt-4">
-        <!-- Comparison Matrix -->
-        <div class="overflow-x-auto hide-scrollbar px-4">
-            <div class="inline-flex space-x-3 min-w-max pb-6">
-                
-                <!-- Category Labels -->
-                <div class="w-20 flex flex-col mt-24 text-[9px] font-bold text-slate-400 uppercase">
-                    <div class="row-price flex items-center">預計費用</div>
-                    <div class="row-date flex items-center">出發季節</div>
-                    <div class="row-stay flex items-center">住宿安排</div>
-                    <div class="row-usp flex items-center">核心價值</div>
-                    <div class="row-exclusive flex items-center">獨家亮點</div>
-                    <div class="row-target flex items-center">目標群眾</div>
+    <main class="container mx-auto px-4 mt-6">
+        
+        <!-- Matrix Grid (PC) / Horizontal Scroll (Mobile) -->
+        <div class="md:grid md:grid-cols-4 md:gap-4 mobile-scroll hide-scrollbar">
+
+            <!-- Card 1: LFC -->
+            <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
+                <div class="h-28 flex items-center justify-center border-b border-slate-100 p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png" class="h-16">
+                </div>
+                <div class="flex flex-col">
+                    <div class="row-h h-price text-slate-800">HK$50,000 - 60,000</div>
+                    <div class="row-h h-date">暑假 / 聖誕<br><span class="text-xs text-slate-500">(8-11 日)</span></div>
+                    <div class="row-h h-stay">英國寄宿學校<br><span class="text-[10px] text-slate-400">Repton / Radley College</span></div>
+                    <div class="row-h h-usp">「利物浦之道」教學<br>注重全人教育、性格培養<br>YNWA 球會文化</div>
+                    <div class="row-h h-exclusive">晏菲路球場深度遊<br>官方認證培訓證書</div>
+                </div>
+            </div>
+
+            <!-- Card 2: Juventus -->
+            <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
+                <div class="h-28 flex items-center justify-center border-b border-slate-100 p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Juventus_FC_2017_logo.svg/1200px-Juventus_FC_2017_logo.svg.png" class="h-16">
+                </div>
+                <div class="flex flex-col">
+                    <div class="row-h h-price text-slate-800">HK$17,450 (Land Only)</div>
+                    <div class="row-h h-date">復活節<br><span class="text-xs text-slate-500">(7 日)</span></div>
+                    <div class="row-h h-stay">3星級商務酒店<br><span class="text-[10px] text-slate-400">Turin / Milan</span></div>
+                    <div class="row-h h-usp">「Calcio」意式足球文化<br>專注場上決策與<br>競賽智慧培訓</div>
+                    <div class="row-h h-exclusive">JTC Vinovo 基地<br>Allianz & San Siro 雙球場</div>
+                </div>
+            </div>
+
+            <!-- Card 3: PSG -->
+            <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
+                <div class="h-28 flex items-center justify-center border-b border-slate-100 p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/1200px-Paris_Saint-Germain_F.C..svg.png" class="h-16">
+                </div>
+                <div class="flex flex-col">
+                    <div class="row-h h-price text-slate-800">HK$35,900 (包機票)</div>
+                    <div class="row-h h-date">5月 (學期中)<br><span class="text-xs text-slate-500">(7 日)</span></div>
+                    <div class="row-h h-stay">4星級精品酒店<br><span class="text-[10px] text-slate-400">Paris, France</span></div>
+                    <div class="row-h h-usp">PSG 學院世界盃<br>22國代表國際巡遊<br>全包式奢華服務</div>
+                    <div class="row-h h-exclusive">王子公園球場決賽<br>住宿酒店 SPA 配套</div>
+                </div>
+            </div>
+
+            <!-- Card 4: CSA / Real Madrid -->
+            <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
+                <div class="h-28 flex items-center justify-center border-b border-slate-100 p-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" class="h-16">
+                </div>
+                <div class="flex flex-col">
+                    <div class="row-h h-price text-slate-800">約 HK$28,500 (€3,345)</div>
+                    <div class="row-h h-date">暑假<br><span class="text-xs text-slate-500">(11 日)</span></div>
+                    <div class="row-h h-stay">3-4星級酒店<br><span class="text-[10px] text-slate-400">Madrid / Barcelona</span></div>
+                    <div class="row-h h-usp">參與 MADCUP 國際賽<br>挑戰西班牙職業球隊<br>高度競爭實戰</div>
+                    <div class="row-h h-exclusive">皇馬官方訓練基地<br>前港腳基奧親自領軍</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Poster Reference Section - 1 Sample slot per company -->
+        <div class="mt-12 px-2">
+            <h3 class="text-slate-800 font-bold mb-6 flex items-center text-sm border-b pb-2">
+                <i class="fas fa-camera-retro mr-2"></i> 宣傳樣本參考 (Visual Samples - 1 per Brand)
+            </h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- LFC Poster Slot -->
+                <div class="bg-slate-800 relative aspect-[3/4] rounded-2xl flex flex-col items-center justify-center text-slate-500 border-2 border-dashed border-slate-300 overflow-hidden group">
+                    <div class="absolute top-2 left-2 bg-red-600 text-white text-[8px] font-bold px-2 py-0.5 rounded">LFC HK</div>
+                    <i class="fas fa-plus-circle text-3xl mb-2 opacity-30"></i>
+                    <span class="text-[10px] font-bold uppercase opacity-40">Add LFC Poster</span>
                 </div>
 
-                <!-- Card 1: LFC -->
-                <div class="w-64 bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200">
-                    <div class="bg-white p-4 h-24 flex items-center justify-center border-b border-slate-100">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png" class="h-14">
-                    </div>
-                    <div class="flex flex-col">
-                        <div class="info-row row-price">HK$50,000 - 60,000</div>
-                        <div class="info-row row-date">暑假 / 聖誕<br>(8-11 日)</div>
-                        <div class="info-row row-stay">英國寄宿學校<br>(Boarding School)</div>
-                        <div class="info-row row-usp">「利物浦之道」教育<br>注重性格培養、紀律及社交技巧</div>
-                        <div class="info-row row-exclusive">晏菲路球場深度遊<br>官方認證證書</div>
-                        <div class="info-row row-target">重視英式教育與<br>全人發展的家庭</div>
-                    </div>
+                <!-- Juve Poster Slot -->
+                <div class="bg-slate-800 relative aspect-[3/4] rounded-2xl flex flex-col items-center justify-center text-slate-500 border-2 border-dashed border-slate-300 overflow-hidden group">
+                    <div class="absolute top-2 left-2 bg-white text-black text-[8px] font-bold px-2 py-0.5 rounded shadow">JUVE</div>
+                    <i class="fas fa-plus-circle text-3xl mb-2 opacity-30"></i>
+                    <span class="text-[10px] font-bold uppercase opacity-40">Add Juve Poster</span>
                 </div>
 
-                <!-- Card 2: Juventus -->
-                <div class="w-64 bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200">
-                    <div class="bg-white p-4 h-24 flex items-center justify-center border-b border-slate-100">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Juventus_FC_2017_logo.svg/1200px-Juventus_FC_2017_logo.svg.png" class="h-14">
-                    </div>
-                    <div class="flex flex-col">
-                        <div class="info-row row-price">HK$17,450 (Land Only)</div>
-                        <div class="info-row row-date">復活節<br>(7 日)</div>
-                        <div class="info-row row-stay">3星級商務酒店<br>(Turin)</div>
-                        <div class="info-row row-usp">道地意大利足球文化<br>專注技術與賽事智慧</div>
-                        <div class="info-row row-exclusive">JTC Vinovo 基地<br>雙球場 Tour</div>
-                        <div class="info-row row-target">追求性價比及<br>歐式生活體驗家庭</div>
-                    </div>
+                <!-- PSG Poster Slot -->
+                <div class="bg-slate-800 relative aspect-[3/4] rounded-2xl flex flex-col items-center justify-center text-slate-500 border-2 border-dashed border-slate-300 overflow-hidden group">
+                    <div class="absolute top-2 left-2 bg-blue-900 text-white text-[8px] font-bold px-2 py-0.5 rounded">PSG</div>
+                    <i class="fas fa-plus-circle text-3xl mb-2 opacity-30"></i>
+                    <span class="text-[10px] font-bold uppercase opacity-40">Add PSG Poster</span>
                 </div>
 
-                <!-- Card 3: PSG -->
-                <div class="w-64 bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200">
-                    <div class="bg-white p-4 h-24 flex items-center justify-center border-b border-slate-100">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/1200px-Paris_Saint-Germain_F.C..svg.png" class="h-14">
-                    </div>
-                    <div class="flex flex-col">
-                        <div class="info-row row-price">HK$35,900 (包機票)</div>
-                        <div class="info-row row-date">5月 (學期中)<br>(7 日)</div>
-                        <div class="info-row row-stay">4星級精品酒店<br>(Paris)</div>
-                        <div class="info-row row-usp">「世界盃」精英感<br>全包式奢華服務、VIP 巡遊</div>
-                        <div class="info-row row-exclusive">王子公園球場決賽<br>酒店 SPA 配套</div>
-                        <div class="info-row row-target">追求地位、奢華便利<br>及品牌形象的家庭</div>
-                    </div>
+                <!-- CSA Poster Slot -->
+                <div class="bg-slate-800 relative aspect-[3/4] rounded-2xl flex flex-col items-center justify-center text-slate-500 border-2 border-dashed border-slate-300 overflow-hidden group">
+                    <div class="absolute top-2 left-2 bg-blue-500 text-white text-[8px] font-bold px-2 py-0.5 rounded">CSA</div>
+                    <i class="fas fa-plus-circle text-3xl mb-2 opacity-30"></i>
+                    <span class="text-[10px] font-bold uppercase opacity-40">Add CSA Poster</span>
                 </div>
-
-                <!-- Card 4: CSA / Real Madrid -->
-                <div class="w-64 bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200">
-                    <div class="bg-white p-4 h-24 flex items-center justify-center border-b border-slate-100">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" class="h-14">
-                    </div>
-                    <div class="flex flex-col">
-                        <div class="info-row row-price">約 HK$28,500</div>
-                        <div class="info-row row-date">暑假<br>(11 日)</div>
-                        <div class="info-row row-stay">3-4星級酒店<br>(Madrid/BCN)</div>
-                        <div class="info-row row-usp">實戰主義！參與 MADCUP 國際賽<br>挑戰西班牙職業球隊</div>
-                        <div class="info-row row-exclusive">皇馬官方場地訓練<br>前港腳名宿領軍</div>
-                        <div class="info-row row-target">重視比賽實戰、<br>期望提升技術的家長</div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
-        <!-- Poster Gallery Placeholder -->
-        <div class="px-6 mt-6">
-            <h3 class="text-slate-800 font-bold mb-4 flex items-center text-sm">
-                <i class="fas fa-camera-retro mr-2"></i> 相關宣傳材料參考
-            </h3>
-            <div class="grid grid-cols-2 gap-3">
-                <div class="bg-slate-200 aspect-[3/4] rounded-xl flex flex-col items-center justify-center text-slate-400 p-4 border border-slate-300">
-                    <i class="fas fa-image text-xl mb-1"></i>
-                    <span class="text-[8px] uppercase font-bold tracking-widest">Post A</span>
-                </div>
-                <div class="bg-slate-200 aspect-[3/4] rounded-xl flex flex-col items-center justify-center text-slate-400 p-4 border border-slate-300">
-                    <i class="fas fa-image text-xl mb-1"></i>
-                    <span class="text-[8px] uppercase font-bold tracking-widest">Post B</span>
-                </div>
-            </div>
+        <!-- Navigation -->
+        <div class="mt-16 flex justify-between items-center border-t pt-8 px-4">
+            <a href="part1_intro.html" class="text-slate-400 hover:text-slate-600 text-sm font-bold flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 返回第一部分
+            </a>
+            <a href="part5_strategy.html" class="bg-slate-800 text-white px-8 py-3 rounded-full font-bold shadow-xl hover:bg-slate-700 transition">
+                下一部分 <i class="fas fa-arrow-right ml-2"></i>
+            </a>
         </div>
     </main>
 
-    <!-- Simple Footer for Research -->
     <footer class="mt-12 text-center text-[10px] text-slate-400 pb-10">
         <p>Market Research Project 2026 • Team 10</p>
-        <p class="mt-1 italic">"You'll Never Walk Alone"</p>
     </footer>
 
 </body>
