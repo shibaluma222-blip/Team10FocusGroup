@@ -20,18 +20,12 @@
 
         /* Fixed Row Heights for grid alignment */
         .row-h { display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; border-bottom: 1px solid #f1f5f9; font-size: 12px; }
-        .h-price { height: 60px; font-weight: bold; font-size: 14px; }
+        .h-price { height: 75px; font-weight: bold; font-size: 13px; line-height: 1.3; }
         .h-date { height: 60px; }
         .h-stay { height: 75px; }
-        .h-usp { height: 110px; line-height: 1.4; padding: 10px; }
-        /* Updated to center alignment as requested */
-        .h-inclusion { height: 190px; line-height: 1.5; padding: 12px; font-size: 11px; align-items: center; text-align: center; overflow-y: auto; }
-        .h-exclusive { height: 85px; font-style: italic; color: #64748b; font-size: 11px; }
-
-        /* Zoom Modal Styles */
-        #zoom-modal { transition: opacity 0.3s ease; }
-        .zoom-img-container { transform: scale(0.9); transition: transform 0.3s ease; }
-        #zoom-modal.active .zoom-img-container { transform: scale(1); }
+        .h-usp { height: 110px; line-height: 1.4; padding: 10px; font-weight: 500; }
+        .h-inclusion { height: 210px; line-height: 1.5; padding: 12px; font-size: 11px; align-items: center; text-align: center; overflow-y: auto; }
+        .h-exclusive { height: 90px; color: #64748b; font-size: 11px; }
     </style>
 </head>
 <body class="pb-10">
@@ -53,18 +47,18 @@
                 </div>
                 <div class="flex flex-col">
                     <div class="row-h h-price text-slate-800">HK$50,000 - 60,000</div>
-                    <div class="row-h h-date">暑假 / 聖誕<br><span class="text-xs text-slate-500">(8-11 日)</span></div>
-                    <div class="row-h h-stay">英國寄宿學校<br><span class="text-[10px] text-slate-400">Repton / Radley College</span></div>
-                    <div class="row-h h-usp">「利物浦之道」教學<br>注重全人教育、性格培養<br>YNWA 球會文化</div>
+                    <div class="row-h h-date">2026 暑假<br><span class="text-xs text-slate-500">(8 / 11 日)</span></div>
+                    <div class="row-h h-stay">英國傳統寄宿學校<br><span class="text-[10px] text-slate-400">Repton / Radley College</span></div>
+                    <div class="row-h h-usp">LFC Academy 官方課程<br>全人教育與品格培養<br>足球英語課堂</div>
                     <div class="row-h h-inclusion flex-col">
-                        LFC Academy 官方課程<br>
-                        Soccer English 英語課程<br>
-                        足球分析及營養工作坊<br>
-                        LFC 學院訓練球衣<br>
-                        全包餐膳 (Full Board)<br>
+                        LFC 教練親自指導<br>
+                        球員工作坊 (戰術/營養)<br>
+                        Anfield 球場深度參觀<br>
+                        LFC Academy 訓練 Kit<br>
+                        包全餐 (Full Board)<br>
                         利物浦城市遊、主題樂園
                     </div>
-                    <div class="row-h h-exclusive">晏菲路球場深度遊<br>官方認證培訓證書</div>
+                    <div class="row-h h-exclusive">獲得官方證書<br>及個人教練評估報告</div>
                 </div>
             </div>
 
@@ -74,63 +68,63 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Juventus_FC_2017_logo.svg/1200px-Juventus_FC_2017_logo.svg.png" class="h-14" alt="Juventus Logo">
                 </div>
                 <div class="flex flex-col">
-                    <div class="row-h h-price text-slate-800">HK$17,450 (Land Only)</div>
-                    <div class="row-h h-date">復活節<br><span class="text-xs text-slate-500">(7 日)</span></div>
+                    <div class="row-h h-price text-slate-800">球員 HK$17,450<br><span class="text-[10px] font-normal">家長 HK$13,950 (不包機票)</span></div>
+                    <div class="row-h h-date">2026 4月 (復活節)<br><span class="text-xs text-slate-500">(7 日行程)</span></div>
                     <div class="row-h h-stay">3星級商務酒店<br><span class="text-[10px] text-slate-400">Turin / Milan</span></div>
-                    <div class="row-h h-usp">「Calcio」意式足球文化<br>專注場上決策與<br>競賽智慧培訓</div>
+                    <div class="row-h h-usp">意式足球文化體驗<br>與全球分校進行比賽<br>設有家長同行套餐</div>
                     <div class="row-h h-inclusion flex-col">
-                        祖記學院教練每日訓練<br>
-                        意甲門票 (Juventus vs Genoa)<br>
-                        Juve 官方訓練裝備<br>
-                        與其他分校友賽<br>
-                        包都靈地道晚餐<br>
-                        私人巴士往返球場
+                        Juventus Academy 教練訓練<br>
+                        意甲門票 (Juve vs Genoa)<br>
+                        JTC Vinovo 基地訓練課<br>
+                        Juventus 訓練制服<br>
+                        酒店全餐 (Full Board)<br>
+                        都靈及米蘭球場導賞
                     </div>
-                    <div class="row-h h-exclusive">JTC Vinovo 基地<br>Allianz & San Siro 雙球場</div>
+                    <div class="row-h h-exclusive">進入 JTC Vinovo 基地<br>Allianz & San Siro 雙球場參觀</div>
                 </div>
             </div>
 
-            <!-- Card 3: PSG -->
+            <!-- Card 2: PSG -->
             <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
                 <div class="h-24 flex items-center justify-center border-b border-slate-100 p-4">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/1200px-Paris_Saint-Germain_F.C..svg.png" class="h-14" alt="PSG Logo">
                 </div>
                 <div class="flex flex-col">
-                    <div class="row-h h-price text-slate-800">HK$35,900 (包機票)</div>
-                    <div class="row-h h-date">5月 (學期中)<br><span class="text-xs text-slate-500">(7 日)</span></div>
-                    <div class="row-h h-stay">4星級精品酒店<br><span class="text-[10px] text-slate-400">Paris, France</span></div>
-                    <div class="row-h h-usp">PSG 學院世界盃<br>22國代表國際巡遊<br>全包式奢華服務</div>
+                    <div class="row-h h-price text-slate-800">HK$35,900<br><span class="text-[10px] font-normal">(包含來回機票)</span></div>
+                    <div class="row-h h-date">2026 5月 (學期中)<br><span class="text-xs text-slate-500">(7 日 6 夜)</span></div>
+                    <div class="row-h h-stay">4星級酒店<br><span class="text-[10px] text-slate-400">Hotel Oceania Paris</span></div>
+                    <div class="row-h h-usp">PSG Academy 世界盃賽事<br>代表港澳分校參與巡遊<br>與超過 20 國代表競技</div>
                     <div class="row-h h-inclusion flex-col">
-                        來回巴黎機票 (包稅)<br>
-                        Nike 官方訓練套裝<br>
+                        香港-巴黎來回機票<br>
                         3 日世界盃錦標賽事<br>
-                        PSG 主場比賽門票<br>
-                        全包餐膳 (Pork-free/Halal)<br>
-                        旅遊保險及專人接送
+                        法甲比賽門票 (PSG 主場)<br>
+                        全套 Nike 官方裝備包<br>
+                        全餐 (Full Board)<br>
+                        閉幕典禮及專屬派對
                     </div>
-                    <div class="row-h h-exclusive">王子公園球場決賽<br>住宿酒店 SPA 配套</div>
+                    <div class="row-h h-exclusive">Parc des Princes 決賽場地<br>PSG Campus 基地導賞</div>
                 </div>
             </div>
 
-            <!-- Card 4: CSA / Real Madrid -->
+            <!-- Card 4: CSA / Espanyol -->
             <div class="bg-white rounded-3xl shadow-md overflow-hidden border border-slate-200">
                 <div class="h-24 flex items-center justify-center border-b border-slate-100 p-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" class="h-14" alt="Real Madrid Logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" class="h-12" alt="CSA">
                 </div>
                 <div class="flex flex-col">
-                    <div class="row-h h-price text-slate-800">約 HK$28,500 (€3,345)</div>
-                    <div class="row-h h-date">暑假<br><span class="text-xs text-slate-500">(11 日)</span></div>
-                    <div class="row-h h-stay">3-4星級酒店<br><span class="text-[10px] text-slate-400">Madrid / Barcelona</span></div>
-                    <div class="row-h h-usp">參與 MADCUP 國際賽<br>挑戰西班牙職業球隊<br>高度競爭實戰</div>
+                    <div class="row-h h-price text-slate-800">球員 €3,345 (約$28,500)<br><span class="text-[10px] font-normal">家長 €2,495 (不包機票)</span></div>
+                    <div class="row-h h-date">2026 7月 (暑假)<br><span class="text-xs text-slate-500">(11 日 10 夜)</span></div>
+                    <div class="row-h h-stay">4星級酒店<br><span class="text-[10px] text-slate-400">Barcelona / San Sebastian</span></div>
+                    <div class="row-h h-usp">參與大型 Donosti Cup<br>Espanyol 基地官方訓練<br>挑戰西班牙職業球隊</div>
                     <div class="row-h h-inclusion flex-col">
                         Donosti Cup 參賽席位<br>
-                        2 節皇馬基地官方訓練<br>
-                        2 場當地球會競技友賽<br>
+                        Espanyol 教練指導課程<br>
+                        至少 4 場國際錦標賽事<br>
                         FC Barcelona 博物館參觀<br>
-                        半包膳食 (早+午/晚)<br>
-                        10 晚酒店住宿
+                        Half Board (早 + 午/晚)<br>
+                        24/7 團隊協調專員
                     </div>
-                    <div class="row-h h-exclusive">皇馬官方訓練基地<br>前港腳基奧親自領軍</div>
+                    <div class="row-h h-exclusive">Dani Jarque 訓練基地<br>前港腳基奧親自帶領</div>
                 </div>
             </div>
 
@@ -142,7 +136,7 @@
                 <i class="fas fa-file-pdf mr-2 text-red-500"></i> 詳細資料下載 (PDF Details)
             </h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                <a href="lfc_details.png" class="bg-white border border-slate-200 p-4 rounded-2xl flex flex-col items-center hover:bg-slate-50 transition shadow-sm group">
+                <a href="lfc_details.pdf" class="bg-white border border-slate-200 p-4 rounded-2xl flex flex-col items-center hover:bg-slate-50 transition shadow-sm group">
                     <i class="fas fa-file-pdf text-red-400 text-2xl mb-2 group-hover:scale-110 transition-transform"></i>
                     <span class="text-[10px] font-bold text-slate-700">LFC Info Pack</span>
                     <span class="text-[8px] text-slate-400 uppercase mt-1">Download</span>
@@ -165,48 +159,44 @@
             </div>
         </div>
 
-        <!-- Poster Reference Section -->
+        <!-- Poster Reference Section (Social Links) -->
         <div class="mt-12 px-2">
             <h3 class="text-slate-800 font-bold mb-6 flex items-center text-sm border-b pb-2">
-                <i class="fas fa-camera-retro mr-2"></i> 宣傳樣本參考 (點擊放大預覽)
+                <i class="fas fa-external-link-alt mr-2 text-blue-500"></i> 宣傳樣本參考 (Social Media Links)
             </h3>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- LFC Poster -->
-                <div onclick="openZoom('lfc_poster.png')" class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in group">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center transition-all">
-                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="https://www.facebook.com/share/p/1KwTcXeEc8/" target="_blank" class="flex items-center justify-between bg-white border border-slate-200 p-4 rounded-xl hover:bg-slate-50 transition shadow-sm group">
+                    <div class="flex items-center">
+                        <i class="fab fa-facebook text-red-600 text-lg mr-3"></i>
+                        <span class="text-[10px] font-bold text-slate-700">LFC HK Instagram</span>
                     </div>
-                    <div class="absolute top-2 left-2 bg-red-600 text-white text-[8px] font-bold px-2 py-0.5 rounded z-10">LFC HK</div>
-                    <img src="lfc_poster.png" class="w-full h-full object-cover" alt="LFC Poster" onerror="this.src='https://placehold.co/600x800/C8102E/white?text=LFC+Poster'">
-                </div>
+                    <i class="fas fa-chevron-right text-slate-300 group-hover:translate-x-1 transition-transform"></i>
+                </a>
 
-                <!-- Juve Poster -->
-                <div onclick="openZoom('juve_poster.png')" class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in group">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center transition-all">
-                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                <a href="https://www.instagram.com/p/DRuJy3uk9qg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="flex items-center justify-between bg-white border border-slate-200 p-4 rounded-xl hover:bg-slate-50 transition shadow-sm group">
+                    <div class="flex items-center">
+                        <i class="fab fa-instagram text-blue-800 text-lg mr-3"></i>
+                        <span class="text-[10px] font-bold text-slate-700">Juventus HK Instagram</span>
                     </div>
-                    <div class="absolute top-2 left-2 bg-white text-black text-[8px] font-bold px-2 py-0.5 rounded shadow z-10">JUVE</div>
-                    <img src="juve_poster.png" class="w-full h-full object-cover" alt="Juventus Poster" onerror="this.src='https://placehold.co/600x800/000000/white?text=Juve+Poster'">
-                </div>
+                    <i class="fas fa-chevron-right text-slate-300 group-hover:translate-x-1 transition-transform"></i>
+                </a>
 
-                <!-- PSG Poster -->
-                <div onclick="openZoom('psg_poster.png')" class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in group">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center transition-all">
-                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                <a href="https://www.instagram.com/p/DSj7kCjEzHm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="flex items-center justify-between bg-white border border-slate-200 p-4 rounded-xl hover:bg-slate-50 transition shadow-sm group">
+                    <div class="flex items-center">
+                        <i class="fab fa-instagram text-blue-900 text-lg mr-3"></i>
+                        <span class="text-[10px] font-bold text-slate-700">PSG Academy HK Instagram</span>
                     </div>
-                    <div class="absolute top-2 left-2 bg-blue-900 text-white text-[8px] font-bold px-2 py-0.5 rounded z-10">PSG</div>
-                    <img src="psg_poster.png" class="w-full h-full object-cover" alt="PSG Poster" onerror="this.src='https://placehold.co/600x800/004170/white?text=PSG+Poster'">
-                </div>
+                    <i class="fas fa-chevron-right text-slate-300 group-hover:translate-x-1 transition-transform"></i>
+                </a>
 
-                <!-- CSA Poster -->
-                <div onclick="openZoom('csa_poster.png')" class="bg-slate-200 relative aspect-[3/4] rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in group">
-                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 flex items-center justify-center transition-all">
-                        <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                <a href="https://www.facebook.com/share/v/19vebqCP4X/" target="_blank" class="flex items-center justify-between bg-white border border-slate-200 p-4 rounded-xl hover:bg-slate-50 transition shadow-sm group">
+                    <div class="flex items-center">
+                        <i class="fab fa-facebook text-sky-600 text-lg mr-3"></i>
+                        <span class="text-[10px] font-bold text-slate-700">CSA HK Instagram</span>
                     </div>
-                    <div class="absolute top-2 left-2 bg-blue-500 text-white text-[8px] font-bold px-2 py-0.5 rounded z-10">CSA</div>
-                    <img src="csa_poster.png" class="w-full h-full object-cover" alt="CSA Poster" onerror="this.src='https://placehold.co/600x800/005599/white?text=CSA+Poster'">
-                </div>
+                    <i class="fas fa-chevron-right text-slate-300 group-hover:translate-x-1 transition-transform"></i>
+                </a>
             </div>
         </div>
 
@@ -221,51 +211,9 @@
         </div>
     </main>
 
-    <!-- Tap to Zoom Modal Overlay -->
-    <div id="zoom-modal" class="fixed inset-0 bg-black/90 z-[100] hidden opacity-0 flex flex-col items-center justify-center p-4 transition-all duration-300">
-        <button onclick="closeZoom()" class="absolute top-6 right-6 text-white text-4xl p-2 z-[110]">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="zoom-img-container max-w-full max-h-[85vh] overflow-auto rounded-xl">
-            <img id="modal-img" src="" class="max-w-full h-auto mx-auto shadow-2xl" alt="Full Preview">
-        </div>
-        <p class="text-white/60 text-xs mt-6 uppercase tracking-widest">點擊背景關閉預覽</p>
-    </div>
-
     <footer class="mt-12 text-center text-[10px] text-slate-400 pb-10">
         <p>Market Research Project 2026 • Team 10</p>
     </footer>
-
-    <script>
-        const modal = document.getElementById('zoom-modal');
-        const modalImg = document.getElementById('modal-img');
-
-        function openZoom(imgSrc) {
-            modalImg.src = imgSrc;
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.classList.add('active');
-            }, 10);
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeZoom() {
-            modal.classList.add('opacity-0');
-            modal.classList.remove('active');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modalImg.src = '';
-            }, 300);
-            document.body.style.overflow = 'auto';
-        }
-
-        modal.onclick = function(e) {
-            if (e.target === modal || e.target.classList.contains('zoom-img-container')) {
-                closeZoom();
-            }
-        };
-    </script>
 
 </body>
 </html>
